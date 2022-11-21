@@ -1,0 +1,21 @@
+.maxwidth{
+    width: 90%;
+}
+.mediumwidth{
+    width: 50%;
+}
+.quarterwidth{
+    width: 33%;
+}
+.closeButton{
+    width: 10%;
+}
+
+.stockDetails{
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+#backBtn{
+    margin-left: 5%;
+}

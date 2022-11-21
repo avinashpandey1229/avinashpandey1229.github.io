@@ -1,0 +1,10 @@
+<div class="container my-3">
+  <form (ngSubmit)="addStock()">
+    <div class="form-group">
+      <label for="stock">Enter the symbol of a stock to track (i.e. AAPL, TSLA, GOOGL)</label>
+      <input type="text" #stockId [(ngModel)]="stockInput" name="stockInput" class="form-control" id="stockInput"
+        minlength="1" maxlength="5" placeholder="Enter stock id" />
+    </div>
+    <button type="submit" id="trackBtn" class="btn btn-primary" [disabled]="!(stockId.value)">Track Stock</button>
+  </form>
+</div>

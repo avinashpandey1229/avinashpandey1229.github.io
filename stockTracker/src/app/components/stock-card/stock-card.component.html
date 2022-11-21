@@ -1,0 +1,22 @@
+<div class="card fullsize stockDetails">
+    <div class="row card-header">
+        <div class="column fullsize"> {{stockName}}({{stockId}})</div>
+        <div class="column closeButton"> <button class="btn btn-primary" id="remove{{stockId}}" (click)="deleteStock(stockId)">X</button></div>
+    </div>
+    <div class="card-body row" *ngIf="stockDetails">
+        <div class="column halfsize">
+            <div class="row">
+                <div class="column halfsize">Change today: {{stockDetails?.d }} %</div>
+                <div class="column halfsize">Opening Price: {{stockDetails?.o | currency}}</div>
+            </div>
+            <div class="row">
+                <div class="column halfsize">Current Price: {{stockDetails?.c | currency}}</div>
+                <div class="column halfsize">High Price: {{stockDetails?.h | currency}}</div>
+            </div>
+        </div>
+        <div class="column halfsize"><img appStockDirectionImage [changePercent]="stockDetails.d"  height="50" width="50"/></div>
+        <div class="column fullsize">
+            <a routerLink="/sentiment/{{stockId}}" id="sentiment{{stockId}}" class="btn btn-primary">Go to social sentiments details</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="card maxwidth stockDetails">
+    <div class="row card-header">
+        <div class="column maxwidth"> {{stockName}}({{symbol}})</div>
+    </div>
+    <div class="card-body row" *ngIf="sentiments && sentiments.data.length>0">
+        <div class="quarterwidth" *ngFor="let sentiment of sentiments?.data">
+            <div class="column">
+               <div class="row">
+                <div class="column mediumwidth">
+                    <div class="row">Month: {{sentiment.month | monthName}}</div>
+                    <div class="row">Change: {{sentiment.change}}</div>
+                    <div class="row">MSPR: {{sentiment.mspr}}</div>
+                </div>
+                <div class="column mediumwidth"><img appStockDirectionImage [changePercent]="sentiment.change" height="50"
+                    width="50" /></div>
+               </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="column maxwidth">
+    <a routerLink="/" id="backBtn" class="btn btn-primary">Back to list of stocks</a>
+</div>

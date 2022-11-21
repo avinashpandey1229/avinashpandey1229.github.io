@@ -1,0 +1,15 @@
+.fullsize{
+    width: 90%;
+}
+.halfsize{
+    width: 50%;
+}
+.closeButton{
+    width: 10%;
+    margin-right: 0px;
+}
+
+.stockDetails{
+    margin-left: 5%;
+    margin-bottom: 2%;
+}

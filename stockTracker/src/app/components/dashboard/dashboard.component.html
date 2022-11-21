@@ -1,0 +1,8 @@
+<div class="container-fluid">
+    <app-add-stock (addStockId)="addStockId($event)"></app-add-stock>
+</div>
+<div *ngIf="stocks.length>0">
+    <div *ngFor="let stock of stocks">
+        <app-stock-card [stockId]="stock" (deleteStockId)="deleteStockId($event)"></app-stock-card>
+    </div>
+</div>
